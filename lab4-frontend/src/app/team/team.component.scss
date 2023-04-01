@@ -1,0 +1,54 @@
+$main-color: #160a86;
+$second-color: beige;
+$text-color: #1b1b1b;
+$bg-color: #cae4d8;
+$box-shadow: 2px 2px 10px 4px rgb(14 55 54 / 15%);
+
+.btn {
+  margin: 10px auto;
+  display: block;
+  padding: 10px 30px;
+  border: none;
+  border-radius: 0.3rem;
+  background-position: $main-color;
+  background-color: $main-color;
+  color: $bg-color;
+  font-weight: 500;
+  &:hover {
+    background-color: $second-color;
+    color: $text-color;
+    border: 1px solid black;
+    cursor: pointer;
+  }
+}
+
+.team-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, auto));
+  gap: 1.5rem;
+  margin-top: 2rem;
+  .box {
+    padding: 20px;
+    box-shadow: $box-shadow;
+    border-radius: 0.5rem;
+    text-align: center;
+    p {
+      font-size: 0.938rem;
+    }
+    h2 {
+      font-size: 1.2rem;
+      font-weight: 600;
+      margin: 0.5rem 0 0.5rem;
+    }
+    img {
+      width: 70px;
+      height: 70px;
+      border-radius: 50%;
+      object-fit: cover;
+    }
+    &:hover {
+      background-color: $second-color;
+      transition: 0.2s all linear;
+    }
+  }
+}

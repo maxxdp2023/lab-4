@@ -1,0 +1,28 @@
+<section class="doput" id="doput">
+  <div class="heading">
+    <h2>Edit form</h2>
+  </div>
+
+  <form class="put-form">
+    <div class="inputs">
+      <div class="field">
+        <label for="img">Enter image file name:</label><br>
+        <input type="text" class="input" id="img" name="img" #img (keyup)="getImg(img.value)" required>
+      </div>
+      <div class="field">
+        <label for="name">Enter car model:</label><br>
+        <input type="text" class="input" id="name" name="name" #name (keyup)="getName(name.value)" required>
+      </div>
+    </div>
+    <div class="inputs">
+      <form #p="ngForm" (keyup)="getPrice(p)">
+        <div class="field">
+          <label for="price">Enter car price:</label><br>
+          <input type="number" class="input" id="price" name="price" ngModel required>
+        </div>
+      </form>
+    </div>
+  </form>
+
+  <button (click)="OnClick()" class="btn">Make PUT</button>
+</section>

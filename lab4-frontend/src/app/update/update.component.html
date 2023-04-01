@@ -1,0 +1,13 @@
+<div *ngIf="car">
+  <h2 class="update-heading">Update a car</h2>
+  <form class="update-form">
+    <input type="hidden" [(ngModel)]="car.id">
+    <label for="img">Enter new image file name:</label><br>
+    <input type="text" id="img" [(ngModel)]="car.img"><br>
+    <label for="name">Enter new car name:</label><br>
+    <input type="text" id="name" [(ngModel)]="car.name"><br>
+    <label for="price">Enter new car price:</label><br>
+    <input type="number" id="price" [(ngModel)]="car.price"><br>
+    <button (click)="updateCar()" class="btn">Update a car</button>
+  </form>
+</div>

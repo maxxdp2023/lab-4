@@ -1,0 +1,25 @@
+<section class="list" id="list">
+  <div class="heading">
+    <h2>{{title}}</h2>
+  </div>
+  <ul>
+    <li *ngFor="let c of carList" (click)="onSelect(c)">
+      {{c.id}}. <b>Image:</b> {{c.img}} <b>Name:</b> {{c.name}} <b>Price:</b> {{c.price}}
+      <span (click)="deleteCar(c)" class="delete">Delete car</span>
+    </li>
+  </ul>
+
+  <h2 (click)="showAddForm=!showAddForm" class="add-heading">Add a car</h2>
+  <form *ngIf="showAddForm" #form1="ngForm" (ngSubmit)="addCar(form1.value)" class="add-form">
+    <input type="hidden" name="id" ngModel="-1">
+    <label for="img">Enter image file name:</label><br>
+    <input type="text" name="img" id="img" ngModel><br>
+    <label for="name">Enter car name:</label><br>
+    <input type="text" name="name" id="name" ngModel><br>
+    <label for="price">Enter car price:</label><br>
+    <input type="number" name="price" id="price" ngModel><br>
+    <input type="submit" class="btn" value="Add a car">
+  </form>
+
+  <app-update [car]="selectedCar" (updated)="updateCars()"></app-update>
+</section>

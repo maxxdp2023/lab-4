@@ -1,0 +1,60 @@
+.home {
+  width: 100%;
+  min-height: 110vh;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(17rem, auto));
+  align-items: center;
+  gap: 1.5rem;
+}
+.home .home-text h1 {
+  font-size: 3rem;
+  color: #160a86;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+.home .home-text p {
+  font-size: 1.1rem;
+  color: #1b1b1b;
+  margin: 0.5rem 0 1.4rem;
+}
+.home .home-text .btn {
+  padding: 10px 30px;
+  border: none;
+  border-radius: 0.3rem;
+  background-position: #160a86;
+  background-color: #160a86;
+  color: #cae4d8;
+  font-weight: 500;
+}
+.home .home-text .btn:hover {
+  background-color: beige;
+  color: #1b1b1b;
+  border: 1px solid black;
+  cursor: pointer;
+}
+
+@media (max-width: 1058px) {
+  .home-text h1 {
+    font-size: 2.4rem;
+  }
+}
+@media (max-width: 991px) {
+  .home-text h1 {
+    font-size: 2rem;
+  }
+}
+@media (max-width: 360px) {
+  .home-text {
+    padding-top: 15px;
+  }
+  .home-text h1 {
+    font-size: 1.4rem;
+  }
+  .home-text p {
+    font-size: 0.8rem;
+    font-weight: 300;
+  }
+}/*# sourceMappingURL=home.component.css.map */

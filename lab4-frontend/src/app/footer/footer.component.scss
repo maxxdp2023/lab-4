@@ -1,0 +1,64 @@
+$main-color: #160a86;
+$second-color: beige;
+$text-color: #1b1b1b;
+$bg-color: #cae4d8;
+$box-shadow: 2px 2px 10px 4px rgb(14 55 54 / 15%);
+
+.footer {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, auto));
+  gap: 1.5rem;
+  .footer-box {
+    h2 {
+      font-size: 1.2rem;
+      font-weight: 600;
+      margin-bottom: 10px;
+    }
+    p {
+      font-size: 0.938rem;
+      margin-bottom: 10px;
+    }
+    h3 {
+      font-weight: 600;
+      margin-bottom: 10px;
+    }
+    .social-media {
+      display: flex;
+      align-items: center;
+      column-gap: 0.5rem;
+      a {
+        .bx {
+          font-size: 24px;
+          background-color: $bg-color;
+          color: $text-color;
+          box-shadow: $box-shadow;
+          padding: 10px;
+          border-radius: 0.2rem;
+          :hover {
+            background-color: $second-color;
+            transition: 0.2s all linear;
+          }
+        }
+      }
+    }
+    .contact {
+      display: flex;
+      flex-direction: column;
+      row-gap: 0.5rem;
+      span {
+        display: flex;
+        align-items: center;
+      }
+      i {
+        font-size: 20px;
+        margin-right: 0.5rem;
+      }
+    }
+  }
+}
+
+.copyright {
+  padding: 20px;
+  text-align: center;
+  background: $second-color;
+}
