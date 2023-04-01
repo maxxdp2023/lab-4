@@ -1,0 +1,8 @@
+Crud\CRUDInterface.class
+Servlets\Helpers.class
+Crud\SqlCRUD.class
+jpa\Main1.class
+Entities\CarEntity.class
+jdbc\Connect.class
+jdbc\Main.class
+Servlets\ServletCar.class
